@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "75acff8d-8470-440e-90bf-148465198185",
+		"name": "Public Data API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5901679"
+	},
+	"item": [
+		{
+			"name": "Get all public data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|5ngoN11JejvO3zuwIdjH8Lel1IKuFsieJBQDMdtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://public.data.api/api/v1/people",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new person",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|BWmaJVwt13QGHE0xJZieOiwWGCAoq5lwgPoSaVFp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"firstName\": \"Jana  1312\",\r\n    \"lastName\": \"Mano 5\",\r\n    \"mobileNumber\": \"+44 7508550610\",\r\n    \"address\": \"Dubai kuru santhu\",\r\n    \"city\": \"Dubai\",\r\n    \"postCode\": \"s23432423w\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://public.data.api/api/v1/people",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get person with filter",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|5ngoN11JejvO3zuwIdjH8Lel1IKuFsieJBQDMdtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://public.data.api/api/v1/people?firstName[eq]=Elinore",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people"
+					],
+					"query": [
+						{
+							"key": "firstName[eq]",
+							"value": "Elinore"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update all record for a person",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|5ngoN11JejvO3zuwIdjH8Lel1IKuFsieJBQDMdtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jana\",\r\n    \"lastName\": \"Mano 48\",\r\n    \"mobileNumber\": \"+44 7508550610\",\r\n    \"address\": \"Dubai kuru santhu\",\r\n    \"city\": \"Dubai\",\r\n    \"postCode\": \"s23432423w\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://public.data.api/api/v1/people/27",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update part of the data for a person",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|5ngoN11JejvO3zuwIdjH8Lel1IKuFsieJBQDMdtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jana\",\r\n    \"lastName\": \"Mano 459\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://public.data.api/api/v1/people/27",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bulk insert people",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|5ngoN11JejvO3zuwIdjH8Lel1IKuFsieJBQDMdtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n            \"firstName\": \"Elinore\",\r\n            \"lastName\": \"Pfannerstill 2232\",\r\n            \"mobileNumber\": \"+1-651-520-7243\",\r\n            \"address\": \"4549 Wava Spring Apt. 961\\nLake Kelvin, RI 18404-9942\",\r\n            \"city\": \"East Maiaville\",\r\n            \"postCode\": \"19920-3587\"\r\n        },{\r\n            \"firstName\": \"Jodie\",\r\n            \"lastName\": \"Nikolaus\",\r\n            \"mobileNumber\": \"360-961-9242\",\r\n            \"address\": \"875 Rowe Row\\nElliefort, WV 61181-8086\",\r\n            \"city\": \"West Kayleebury\",\r\n            \"postCode\": \"99281\"\r\n        },\r\n        {\r\n            \"firstName\": \"Houston\",\r\n            \"lastName\": \"Lebsack\",\r\n            \"mobileNumber\": \"+1 (929) 819-9684\",\r\n            \"address\": \"5905 Conor Court\\nDaytonshire, LA 52967-4773\",\r\n            \"city\": \"Fadelside\",\r\n            \"postCode\": \"89735-6548\"\r\n        },\r\n        {\r\n            \"firstName\": \"Laurel\",\r\n            \"lastName\": \"Dare\",\r\n            \"mobileNumber\": \"(470) 567-8568\",\r\n            \"address\": \"353 Tromp Crossroad Suite 868\\nEast Phoebe, GA 20355\",\r\n            \"city\": \"McLaughlinberg\",\r\n            \"postCode\": \"85175\"\r\n        },\r\n        {\r\n            \"firstName\": \"Bailee\",\r\n            \"lastName\": \"Roob\",\r\n            \"mobileNumber\": \"361-370-7232\",\r\n            \"address\": \"4629 Walsh Walk Suite 754\\nKlockoville, NM 12516\",\r\n            \"city\": \"Port Gabrielleview\",\r\n            \"postCode\": \"96394\"\r\n        },\r\n        {\r\n            \"firstName\": \"Henderson\",\r\n            \"lastName\": \"Jakubowski\",\r\n            \"mobileNumber\": \"+1-640-271-6857\",\r\n            \"address\": \"565 Rempel Plain\\nEast Kristy, ME 38220-2497\",\r\n            \"city\": \"Port Berylshire\",\r\n            \"postCode\": \"93787\"\r\n        },\r\n        {\r\n            \"firstName\": \"Paris\",\r\n            \"lastName\": \"VonRueden\",\r\n            \"mobileNumber\": \"+1-680-487-0297\",\r\n            \"address\": \"436 Raymond Unions\\nSaigechester, AZ 90550\",\r\n            \"city\": \"Delphineview\",\r\n            \"postCode\": \"42958-6836\"\r\n        }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://public.data.api/api/v1/people/bulk",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorization",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"firstName\": \"Elinore2\",\r\n    \"lastName\": \"Pfannerstill\",\r\n    \"mobileNumber\": \"+1-651-520-7243\",\r\n    \"address\": \"4549 Wava Spring Apt. 961\\nLake Kelvin, RI 18404-9942\",\r\n    \"city\": \"East Maiaville\",\r\n    \"postCode\": \"19920-3587\"\r\n},\r\n{\r\n    \"firstName\": \"Jodie2\",\r\n    \"lastName\": \"Nikolaus\",\r\n    \"mobileNumber\": \"360-961-9242\",\r\n    \"address\": \"875 Rowe Row\\nElliefort, WV 61181-8086\",\r\n    \"city\": \"West Kayleebury\",\r\n    \"postCode\": \"99281\"\r\n},\r\n{\r\n    \"firstName\": \"Housto2n\",\r\n    \"lastName\": \"Lebsack\",\r\n    \"mobileNumber\": \"+1 (929) 819-9684\",\r\n    \"address\": \"5905 Conor Court\\nDaytonshire, LA 52967-4773\",\r\n    \"city\": \"Fadelside\",\r\n    \"postCode\": \"89735-6548\"\r\n},\r\n{\r\n    \"firstName\": \"Laurel2\",\r\n    \"lastName\": \"Dare\",\r\n    \"mobileNumber\": \"(470) 567-8568\",\r\n    \"address\": \"353 Tromp Crossroad Suite 868\\nEast Phoebe, GA 20355\",\r\n    \"city\": \"McLaughlinberg\",\r\n    \"postCode\": \"85175\"\r\n},\r\n{\r\n    \"firstName\": \"Bailee2\",\r\n    \"lastName\": \"Roob\",\r\n    \"mobileNumber\": \"361-370-7232\",\r\n    \"address\": \"4629 Walsh Walk Suite 754\\nKlockoville, NM 12516\",\r\n    \"city\": \"Port Gabrielleview\",\r\n    \"postCode\": \"96394\"\r\n},\r\n{\r\n    \"firstName\": \"Henderson2\",\r\n    \"lastName\": \"Jakubowski\",\r\n    \"mobileNumber\": \"+1-640-271-6857\",\r\n    \"address\": \"565 Rempel Plain\\nEast Kristy, ME 38220-2497\",\r\n    \"city\": \"Port Berylshire\",\r\n    \"postCode\": \"93787\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://public.data.api/setup",
+					"protocol": "http",
+					"host": [
+						"public",
+						"data",
+						"api"
+					],
+					"path": [
+						"setup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
