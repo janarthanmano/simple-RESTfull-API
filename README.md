@@ -6,6 +6,11 @@
 
 This is a simple RESTful API built using Laravel to provide access to public database containing details of individual person.
 
+
+### Project requirement 
+- **php 8.0 and above**
+- **MySQL 8 or above**
+
 ### Required tools and their links to install them before starting the API server
 
 - **composer -> [Windows installer](https://getcomposer.org/Composer-Setup.exe)**
