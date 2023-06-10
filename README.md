@@ -21,6 +21,7 @@ This is a simple RESTful API built using Laravel to provide access to public dat
 - **Run composer install and npm install to download all project dependencies**
 - **rename .env.sample to .env and make sure to update the mysql connection info according to your database**
 - **Run PHP artisan commands to migrate database, seed database**
+- **php artisan migrate; php artisan db:seed; php artisan migrate:fresh**
 - **create the virtual host with domain name "public.data.api"**
 - **Import the Postman collection data from PublicDataAPI.postman_collection.json to get all the endpoints**
 - **To get the authorization token, visit the endpoint http://public.data.api/setup**
