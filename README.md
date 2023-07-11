@@ -23,23 +23,22 @@ This is a simple RESTful API built using Laravel to provide access to public dat
 
 - **Install all the required tools to run the project from the information provided above.**
 - **Clone this repo into a directory**
-- **Run composer install and npm install to download all project dependencies**
-- **rename .env.sample to .env and make sure to update the mysql connection info according to your database**
-- **Run PHP artisan commands to migrate database, seed database**
-- **php artisan migrate; php artisan db:seed; php artisan migrate:fresh**
-- **create the virtual host with domain name "public.data.api"**
+- **Open your terminal/cli, goto the project folder and run "composer install" and "npm install" to download all project dependencies**
+- **Rename .env.example to .env and edit the file to make sure the mysql connection info is updated according to your database, change the DB_DATABASE, DB_USERNAME, and DB_PASSWORD**
+- **Run PHP artisan commands to migrate database, seed database "php artisan migrate", "php artisan db:seed", "php artisan migrate:fresh"**
+- **Create the virtual host in WAMP with domain name "public.data.api"**
 - **Import the Postman collection data from PublicDataAPI.postman_collection.json to get all the endpoints**
 - **To get the authorization token, visit the endpoint http://public.data.api/setup**
 
 ### End points
 
+- **GET http://public.data.api/setup to get new users authorization token**
 - **GET http://public.data.api/api/v1/people to display all the public data as json format**
 - **POST http://public.data.api/api/v1/people to add single record along with json format of the new record**
 - **GET http://public.data.api/api/v1/people?firstName[eq]=somename to fetch filtered data**
 - **PUT http://public.data.api/api/v1/people/id to update a record along with json format of the record in the body**
 - **PATCH http://public.data.api/api/v1/people/id to update only few details of a record along with partial json format of the record in the body**
 - **POST http://public.data.api/api/v1/people/bulk to add bulk data to the public database along with array of json formatted records**
-- **GET http://public.data.api/setup to get new users authorization token**
 
 ### Security Vulnerabilities
 
